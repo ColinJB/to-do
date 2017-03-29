@@ -16,6 +16,11 @@
   <input id="description" name="description" type="text">
   </div>
   <button type="submit" class="btn btn-success">Add task</button>
+</form><br>
+<form action="/categories/$categoryId/delete" method="post">
+  <input id="categoryId" name="categoryId" type="hidden" value="$category.getId()">
+  <button type="submit" class="btn btn-danger">Delete Category</button>
 </form>
+
 
 <a href="/categories">All categories</a>
