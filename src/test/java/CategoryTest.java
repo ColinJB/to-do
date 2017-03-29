@@ -100,4 +100,12 @@ public class CategoryTest {
     assertEquals(myCategory.getId(), savedCategory.getId());
   }
 
+  @Test
+  public void delete_deletesCategory_true() {
+    Category myCategory = new Category("Chores");
+    myCategory.save();
+    int myCategoryId = myCategory.getId();
+    myCategory.delete(myCategoryId);
+    assertEquals(null, Category.find(myCategoryId));
+  }
 }
