@@ -11,15 +11,14 @@
   <p>There are no categories yet!</p>
 #end
 <br>
-<h3>Want to delete a category?</h3>
-<br>
-<form action="/categories/$categoryId/delete" method="post">
-  <select id='categoryId' name='categoryId' type='text'>
-  #foreach($category in $categories)
-    <option value="$category.getId()">$category.getName()</option>
-  #end
-  </select>
-  <button type="submit" class="btn btn-danger">Delete Category</button>
+<h3>Add a category here:</h3>
+
+<form action="/categories" method="post">
+<div class="form-group">
+<label for="name">Category name</label>
+<input id="name" name="name" type="text">
+</div>
+<button type="submit" class="btn btn-success">Add Category</button>
 </form><br>
 <h3>Add a new task here:</h3>
 
@@ -38,14 +37,13 @@
   <button type="submit" class="btn btn-primary">Add task</button>
 </form>
 <br>
+<h3>Want to delete a category?</h3>
 <br>
-
-<h3>Add a category here:</h3>
-
-<form action="/categories" method="post">
-<div class="form-group">
-<label for="name">Category name</label>
-<input id="name" name="name" type="text">
-</div>
-<button type="submit" class="btn btn-success">Add Category</button>
-</form>
+<form action="/categories/$categoryId/delete" method="post">
+  <select id='categoryId' name='categoryId' type='text'>
+  #foreach($category in $categories)
+    <option value="$category.getId()">$category.getName()</option>
+  #end
+  </select>
+  <button type="submit" class="btn btn-danger">Delete Category</button>
+</form><br>
