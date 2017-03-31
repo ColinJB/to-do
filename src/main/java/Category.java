@@ -49,9 +49,9 @@ public class Category {
     if (!(otherCategory instanceof Category)) {
       return false;
     } else {
-      Category otherCategory = (Category) otherCategory;
-      return this.getName().equals(otherCategory.getName()) &&
-             this.getId() == otherCategory.getId();
+      Category newCategory = (Category) otherCategory;
+      return this.getName().equals(newCategory.getName()) &&
+             this.getId() == newCategory.getId();
     }
   }
 
