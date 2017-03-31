@@ -58,14 +58,6 @@ public class CategoryTest {
     assertTrue(testCategory.getTasks().containsAll(Arrays.asList(tasks)));
   }
 
-  // @Test
-  // public void addTask_addsTaskToList_true() {
-  //   Category testCategory = new Category("Home");
-  //   Task testTask = new Task("Mow the lawn");
-  //   testCategory.addTask(testTask);
-  //   assertTrue(testCategory.getTasks().contains(testTask));
-  // }
-
   @Test
   public void equals_returnsTrueIfNamesAreTheSame() {
     Category firstCategory = new Category("Chores");
